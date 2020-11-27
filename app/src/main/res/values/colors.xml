@@ -9,4 +9,6 @@
     <color name="boxStrokeColor">#C0CCDA</color>
     <color name="checkboxTextColor">#47525E</color>
     <color name="creatAccountColor">#343F4B</color>
+    <color name="transparentColor">#00F44336</color>
+    <color name="backgroundColor">#00162C</color>
 </resources>
