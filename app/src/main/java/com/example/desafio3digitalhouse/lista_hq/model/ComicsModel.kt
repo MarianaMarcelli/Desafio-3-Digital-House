@@ -2,6 +2,7 @@ package com.example.desafio3digitalhouse.lista_hq.model
 
 data class ComicsModel(
 
+    val id : Int,
     val title: String,
     val issueNumber: Double,
     val description: String,

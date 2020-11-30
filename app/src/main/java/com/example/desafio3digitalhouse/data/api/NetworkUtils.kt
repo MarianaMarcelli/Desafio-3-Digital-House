@@ -1,7 +1,6 @@
-package com.example.desafio3digitalhouse.lista_hq.network
+package com.example.desafio3digitalhouse.data.api
 
 import retrofit2.Retrofit
-import retrofit2.Retrofit.Builder
 import retrofit2.converter.gson.GsonConverterFactory
 
 class NetworkUtils {

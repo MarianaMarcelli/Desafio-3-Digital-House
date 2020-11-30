@@ -19,9 +19,9 @@ class ComicsViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
     fun bind(comic : ComicsModel) {
         numero.text = comic.issueNumber.toString()
 
-        Picasso.get()
-            .load(comic.thumbnail)
-            .into(imagemCapa)
+//        Picasso.get()
+//            .load(comic.thumbnail)
+//            .into(imagemCapa)
     }
 
 }

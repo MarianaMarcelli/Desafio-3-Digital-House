@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/comic_number"
         android:textAlignment="viewStart"
-        android:textColor="@color/blank"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="@+id/imageComic"

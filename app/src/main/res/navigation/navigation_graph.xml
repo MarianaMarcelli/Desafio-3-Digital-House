@@ -13,9 +13,24 @@
         <action
             android:id="@+id/action_loginFragment_to_registerFragment2"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_listaHQsFragment"
+            app:destination="@id/listaHQsFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.desafio3digitalhouse.register.view.RegisterFragment"
-        android:label="RegisterFragment" />
+        android:label="RegisterFragment" >
+        <action
+            android:id="@+id/action_registerFragment_to_listaHQsFragment"
+            app:destination="@id/listaHQsFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaHQsFragment"
+        android:name="com.example.desafio3digitalhouse.lista_hq.view.ListaHQsFragment"
+        android:label="fragment_lista_hqs"
+        tools:layout="@layout/fragment_lista_hqs" />
 </navigation>

@@ -18,5 +18,3 @@ class ComicsAdapter(private val dataSet : List<ComicsModel>): RecyclerView.Adapt
 
     override fun getItemCount() =  dataSet.size
     }
-
-}
