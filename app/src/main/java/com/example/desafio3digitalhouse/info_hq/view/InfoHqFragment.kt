@@ -1,4 +1,4 @@
-package com.example.desafio3digitalhouse.info_hq
+package com.example.desafio3digitalhouse.info_hq.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

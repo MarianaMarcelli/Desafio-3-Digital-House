@@ -2,4 +2,5 @@
 <resources>
     <dimen name="dim15dp">15dp</dimen>
     <dimen name="dim36sp">36sp</dimen>
+    <dimen name="dim_18sp">18sp</dimen>
 </resources>

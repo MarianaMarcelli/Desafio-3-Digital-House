@@ -35,7 +35,7 @@ class ListaHQsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lista_h_qs, container, false)
+        return inflater.inflate(R.layout.fragment_lista_hqs, container, false)
     }
 
     companion object {

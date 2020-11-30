@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import com.example.desafio3digitalhouse.MainActivity
+import com.example.desafio3digitalhouse.home.MainActivity
 import com.example.desafio3digitalhouse.R
 
 class SplashScreenActivity : AppCompatActivity() {
