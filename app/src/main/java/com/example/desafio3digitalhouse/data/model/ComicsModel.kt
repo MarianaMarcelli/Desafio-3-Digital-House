@@ -1,4 +1,4 @@
-package com.example.desafio3digitalhouse.lista_hq.model
+package com.example.desafio3digitalhouse.data.model
 
 data class ComicsModel(
 
@@ -9,7 +9,7 @@ data class ComicsModel(
     val prices: List<ComicPriceModel>,
     val pageCount: Int,
     val dates: List<ComicDateModel>,
-    val thumbnail:ImageModel,
+    val thumbnail: ImageModel,
     val images: List<ImageModel>
 
 )

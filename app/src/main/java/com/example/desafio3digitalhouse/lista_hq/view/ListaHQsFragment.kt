@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
 import com.example.desafio3digitalhouse.lista_hq.adapter.ComicsAdapter
-import com.example.desafio3digitalhouse.lista_hq.model.ComicsModel
+import com.example.desafio3digitalhouse.data.model.ComicsModel
 import com.example.desafio3digitalhouse.lista_hq.repository.ComicsRepository
 import com.example.desafio3digitalhouse.lista_hq.viewmodel.ComicsViewModel
 

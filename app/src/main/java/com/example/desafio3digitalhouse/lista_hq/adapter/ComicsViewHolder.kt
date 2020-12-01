@@ -5,11 +5,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
-import com.example.desafio3digitalhouse.lista_hq.model.ComicDateModel
-import com.example.desafio3digitalhouse.lista_hq.model.ComicPriceModel
-import com.example.desafio3digitalhouse.lista_hq.model.ComicsModel
-import com.example.desafio3digitalhouse.lista_hq.model.ImageModel
-import com.squareup.picasso.Picasso
+import com.example.desafio3digitalhouse.data.model.ComicsModel
 
 class ComicsViewHolder (itemView: View): RecyclerView.ViewHolder(itemView) {
 

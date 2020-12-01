@@ -3,7 +3,7 @@ package com.example.desafio3digitalhouse.lista_hq.viewmodel
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.liveData
-import com.example.desafio3digitalhouse.lista_hq.model.ComicsModel
+import com.example.desafio3digitalhouse.data.model.ComicsModel
 import com.example.desafio3digitalhouse.lista_hq.repository.ComicsRepository
 import kotlinx.coroutines.Dispatchers
 

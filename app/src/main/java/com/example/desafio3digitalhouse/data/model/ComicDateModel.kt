@@ -1,4 +1,4 @@
-package com.example.desafio3digitalhouse.lista_hq.model
+package com.example.desafio3digitalhouse.data.model
 
 data class ComicDateModel(
     val type : String,

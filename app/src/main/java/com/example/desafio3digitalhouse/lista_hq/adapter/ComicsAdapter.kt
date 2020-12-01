@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
-import com.example.desafio3digitalhouse.lista_hq.model.ComicsModel
+import com.example.desafio3digitalhouse.data.model.ComicsModel
 
 class ComicsAdapter(private val dataSet : List<ComicsModel>): RecyclerView.Adapter<ComicsViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {

@@ -42,7 +42,7 @@
         android:scaleType="fitXY"/>
 
     <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/tollbarRegister"
+        android:id="@+id/tollbarInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/transparentColor"
