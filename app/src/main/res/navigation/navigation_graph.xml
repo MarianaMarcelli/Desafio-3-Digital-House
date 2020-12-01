@@ -32,5 +32,30 @@
         android:id="@+id/listaHQsFragment"
         android:name="com.example.desafio3digitalhouse.lista_hq.view.ListaHQsFragment"
         android:label="fragment_lista_hqs"
-        tools:layout="@layout/fragment_lista_hqs" />
+        tools:layout="@layout/fragment_lista_hqs" >
+        <action
+            android:id="@+id/action_listaHQsFragment_to_infoHqFragment"
+            app:destination="@id/infoHqFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoHqFragment"
+        android:name="com.example.desafio3digitalhouse.info_hq.view.InfoHqFragment"
+        android:label="fragment_info_hq"
+        tools:layout="@layout/fragment_info_hq" >
+        <action
+            android:id="@+id/action_infoHqFragment_to_coverDetailFragment"
+            app:destination="@id/coverDetailFragment" />
+        <action
+            android:id="@+id/action_infoHqFragment_to_listaHQsFragment"
+            app:destination="@id/listaHQsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coverDetailFragment"
+        android:name="com.example.desafio3digitalhouse.info_hq.view.CoverDetailFragment"
+        android:label="fragment_cover_detail"
+        tools:layout="@layout/fragment_cover_detail" >
+        <action
+            android:id="@+id/action_coverDetailFragment_to_infoHqFragment"
+            app:destination="@id/infoHqFragment" />
+    </fragment>
 </navigation>

@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.desafio3digitalhouse.R
 
-class InfoHqFragment : Fragment() {
+
+class CoverDetailFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,8 @@ class InfoHqFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_info_hq, container, false)
+        return inflater.inflate(R.layout.fragment_cover_detail, container, false)
     }
+
 
 }
