@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.liveData
 import com.example.desafio3digitalhouse.data.model.ComicsModel
-import com.example.desafio3digitalhouse.lista_hq.repository.ComicsRepository
+import com.example.desafio3digitalhouse.data.repository.ComicsRepository
 import kotlinx.coroutines.Dispatchers
 
 class ComicsViewModel(private val repository: ComicsRepository) : ViewModel() {
@@ -14,7 +14,7 @@ class ComicsViewModel(private val repository: ComicsRepository) : ViewModel() {
     fun obterLista() = liveData(Dispatchers.IO) {
         val response = repository.obterComicsList()
 
-        _comics = response
+        _comics =
 
         emit(response)
     }

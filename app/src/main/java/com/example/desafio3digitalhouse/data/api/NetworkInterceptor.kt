@@ -1,8 +1,7 @@
 package com.example.desafio3digitalhouse.data.api
 
-import com.example.desafio3digitalhouse.extensions.md5
+import com.example.desafio3digitalhouse.data.extensions.md5
 import okhttp3.Interceptor
-import okhttp3.OkHttpClient
 import okhttp3.Response
 
 class NetworkInterceptor : Interceptor {

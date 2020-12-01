@@ -1,4 +1,4 @@
-package com.example.desafio3digitalhouse.extensions
+package com.example.desafio3digitalhouse.data.extensions
 
 import java.security.NoSuchAlgorithmException
 
