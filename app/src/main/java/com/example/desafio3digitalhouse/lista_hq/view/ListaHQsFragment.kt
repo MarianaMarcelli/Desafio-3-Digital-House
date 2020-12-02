@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +22,7 @@ class ListaHQsFragment : Fragment() {
     private lateinit var _listaAdapter: ComicsAdapter
     private lateinit var _recyclerView: RecyclerView
 
-    private var _listComics = mutableListOf<ComicsModel>()
+    private var _listaComics = mutableListOf<ComicsModel>()
 
 
     override fun onCreateView(
@@ -40,7 +41,18 @@ class ListaHQsFragment : Fragment() {
 
         val manager = GridLayoutManager(view.context, 3)
 
-        _listaAdapter = ComicsAdapter(_listComics)
+
+        _listaAdapter = ComicsAdapter(_listaComics) {
+            val bundle = bundleOf(
+                "ID" to it.id,
+                "DATAPUBLICACAO" to it.dates[0].date,
+                "DESCRICAO" to it.description,
+                "PRECO" to it.prices[0].price,
+                "PAGINAS" to it.pageCount,
+                "TITULO" to it.title,
+                "IMAGEM" to it.images
+            )
+        }
 
         _recyclerView.apply {
             setHasFixedSize(true)
@@ -61,7 +73,7 @@ class ListaHQsFragment : Fragment() {
 
     private fun exibirLista(lista: List<ComicsModel>) {
         lista.let {
-            _listComics.addAll(lista)
+            _listaComics.addAll(lista)
             _listaAdapter.notifyDataSetChanged()
         }
     }

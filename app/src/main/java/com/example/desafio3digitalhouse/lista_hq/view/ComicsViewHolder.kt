@@ -22,10 +22,3 @@ class ComicsViewHolder (private val _itemView: View): RecyclerView.ViewHolder(_i
     }
 
 }
-
-//private var titulo = itemView.findViewById<>(R.id.)
-//private var dataPublicacao = itemView.findViewById<>(R>id.)
-//private var descricao = itemView.findViewById<>(R.id.)
-//private var preco = itemView.findViewById<>(R.id.)
-//private var numeroPaginas = itemView.findViewById<>(R.id.)
-//private var imagemPromocional = itemView.findViewById<>(R.id.)

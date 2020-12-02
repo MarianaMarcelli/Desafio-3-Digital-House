@@ -6,15 +6,23 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
 import com.example.desafio3digitalhouse.data.model.ComicsModel
 
-class ComicsAdapter(private val dataSet : List<ComicsModel>): RecyclerView.Adapter<ComicsViewHolder>(){
+class ComicsAdapter(
+    private val _dataSetComics: List<ComicsModel>,
+    private val _listener: (ComicsModel) ->Unit
+) :
+    RecyclerView.Adapter<ComicsViewHolder>() {
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComicsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.hq_model, parent, false)
         return ComicsViewHolder(view)
     }
 
     override fun onBindViewHolder(holder: ComicsViewHolder, position: Int) {
-      holder.bind(dataSet[position])
+        val item = _dataSetComics[position]
+
+        holder.bind(item)
+        holder.itemView.setOnClickListener { _listener(item) }
     }
 
-    override fun getItemCount() =  dataSet.size
-    }
+    override fun getItemCount() = _dataSetComics.size
+}
