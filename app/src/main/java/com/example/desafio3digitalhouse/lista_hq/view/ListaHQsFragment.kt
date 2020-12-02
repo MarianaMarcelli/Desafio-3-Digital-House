@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
-import com.example.desafio3digitalhouse.lista_hq.adapter.ComicsAdapter
 import com.example.desafio3digitalhouse.data.model.ComicsModel
+import com.example.desafio3digitalhouse.data.model.ResponseModel
 import com.example.desafio3digitalhouse.data.repository.ComicsRepository
 import com.example.desafio3digitalhouse.lista_hq.viewmodel.ComicsViewModel
 
@@ -21,14 +21,13 @@ class ListaHQsFragment : Fragment() {
     private lateinit var _listaAdapter: ComicsAdapter
     private lateinit var _recyclerView: RecyclerView
 
-    private var _listaComics = mutableListOf<ComicsModel>()
+    private var _listComics = mutableListOf<ComicsModel>()
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_lista_hqs, container, false)
 
     }
@@ -41,7 +40,7 @@ class ListaHQsFragment : Fragment() {
 
         val manager = GridLayoutManager(view.context, 3)
 
-        _listaAdapter = ComicsAdapter(_listaComics)
+        _listaAdapter = ComicsAdapter(_listComics)
 
         _recyclerView.apply {
             setHasFixedSize(true)
@@ -55,16 +54,15 @@ class ListaHQsFragment : Fragment() {
             )
         ).get(ComicsViewModel::class.java)
 
-        _viewModel.obterLista().observe(viewLifecycleOwner) {
+        _viewModel.obterComicsList().observe(viewLifecycleOwner) {
             exibirLista(it)
         }
     }
 
     private fun exibirLista(lista: List<ComicsModel>) {
         lista.let {
-            _listaComics.addAll(lista)
+            _listComics.addAll(lista)
             _listaAdapter.notifyDataSetChanged()
         }
-
     }
 }

@@ -4,5 +4,5 @@ class ComicsRepository {
 
     private val client = ComicsEndpoint.endpoint
 
-    suspend fun obterComicsList() = client.getComicsList()
+    suspend fun obterComics() = client.getComicsList()
 }

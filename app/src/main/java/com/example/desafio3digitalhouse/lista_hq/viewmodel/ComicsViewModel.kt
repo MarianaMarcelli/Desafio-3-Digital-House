@@ -7,25 +7,22 @@ import com.example.desafio3digitalhouse.data.model.ComicsModel
 import com.example.desafio3digitalhouse.data.repository.ComicsRepository
 import kotlinx.coroutines.Dispatchers
 
-class ComicsViewModel(private val repository: ComicsRepository) : ViewModel() {
+class ComicsViewModel(private val _repository: ComicsRepository) : ViewModel() {
 
-    private var _comics: List<ComicsModel> = listOf()
+    private var _comics = listOf<ComicsModel>()
 
-    fun obterLista() = liveData(Dispatchers.IO) {
-        val response = repository.obterComicsList()
+    fun obterComicsList() = liveData(Dispatchers.IO) {
+        val response = _repository.obterComics()
 
-        _comics =
-
-        emit(response)
+        _comics = response.data.results
+        emit(response.data.results)
     }
 
     class ComicsViewModelFactory(
-        private val repository: ComicsRepository
-    ): ViewModelProvider.Factory {
+        private val _repository: ComicsRepository
+    ) : ViewModelProvider.Factory {
         override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-            return ComicsViewModel(repository) as T
+            return ComicsViewModel(_repository) as T
         }
     }
-
-
 }

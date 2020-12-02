@@ -1,4 +1,4 @@
-package com.example.desafio3digitalhouse.lista_hq.adapter
+package com.example.desafio3digitalhouse.lista_hq.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
