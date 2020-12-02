@@ -11,4 +11,8 @@
     <dimen name="dim40dp">40dp</dimen>
     <dimen name="dom60dp">60dp</dimen>
     <dimen name="dim130dp">130dp</dimen>
+    <dimen name="dim200dp">200dp</dimen>
+    <dimen name="dim230dp">230dp</dimen>
+    <dimen name="dim8dp">8dp</dimen>
+    <dimen name="dim5dp">5dp</dimen>
 </resources>

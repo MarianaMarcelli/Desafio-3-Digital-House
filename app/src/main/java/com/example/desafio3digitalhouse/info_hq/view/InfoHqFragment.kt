@@ -37,13 +37,14 @@ class InfoHqFragment : Fragment() {
 
         val titulo = view.findViewById<TextView>(R.id.txtComicName)
         val descricao = view.findViewById<TextView>(R.id.txtResumo)
-        val preco = view.findViewById<TextView>(R.id.txtPreco)
-        val paginas = view.findViewById<TextView>(R.id.txtPaginas)
-        val data = view.findViewById<TextView>(R.id.txtData)
- //       val imagemPromo = view.findViewById<ImageView>(R.id.imagePromo)
-//        val capa = view.findViewById<ImageButton>(R.id.btnCover)
+        val preco = view.findViewById<TextView>(R.id.txtPreco2)
+        val paginas = view.findViewById<TextView>(R.id.txtPaginas2)
+        val data = view.findViewById<TextView>(R.id.txtData2)
+        val imagemPromo = view.findViewById<ImageView>(R.id.imagePromo)
+    //    val capa = view.findViewById<ImageButton>(R.id.btnCover)
+//        val capa = arguments?.getString("CAPA")
 
-        val capa.src = arguments?.getString("Capa")
+
         titulo.text = arguments?.getString("TITULO")
         descricao.text = arguments?.getString("DESCRICAO")
         preco.text = arguments?.getString("PRECO")
@@ -51,12 +52,14 @@ class InfoHqFragment : Fragment() {
         data.text = arguments?.getString("DATAPUBLICACAO")
 
 
-        Picasso.get()
-            .load(capa)
-            .into(view.findViewById<ImageButton>(R.id.btnCover))
 
+//        Picasso.get()
+//            .load(capa)
+//            .into(view.findViewById<ImageButton>(R.id.btnCover))
 
-
+//        Picasso.get()
+//            .load(capa)
+//            .into(view.findViewById<ImageView>(R.id.imagePromo))
 
 
         val navController = findNavController()
@@ -66,9 +69,10 @@ class InfoHqFragment : Fragment() {
             navController.navigate(R.id.action_infoHqFragment_to_listaHQsFragment)
         }
 
-
-
-
+        val exibeCapa = view.findViewById<ImageView>(R.id.btnCover)
+        exibeCapa.setOnClickListener{
+            navController.navigate(R.id.action_infoHqFragment_to_coverDetailFragment)
+        }
     }
 }
 

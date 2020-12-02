@@ -48,11 +48,11 @@ class ListaHQsFragment : Fragment() {
                 "ID" to it.id,
                 "DATAPUBLICACAO" to it.dates[0].date,
                 "DESCRICAO" to it.description,
-                "PRECO" to it.prices[0].price,
+                "PRECO" to it.prices[0].price.toString(),
                 "PAGINAS" to it.pageCount,
                 "TITULO" to it.title,
                 "IMAGEM" to it.images,
-                "CAPA" to it.thumbnail.converterImagem()
+                "CAPA" to it.thumbnail.path
             )
 
             val navController = findNavController()

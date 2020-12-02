@@ -23,7 +23,7 @@
         android:fontFamily="@font/marvel_regular"
         android:text="@string/marvel"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="@dimen/dim30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/tollbarHqList"
         app:layout_constraintEnd_toEndOf="@+id/tollbarHqList"
@@ -35,12 +35,14 @@
         android:id="@+id/recyclerComics"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginStart="@dimen/dim5dp"
+        android:layout_marginEnd="@dimen/dim5dp"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tollbarHqList"
-        tools:listitem="@layout/hq_model"
-        />
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/hq_model" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
