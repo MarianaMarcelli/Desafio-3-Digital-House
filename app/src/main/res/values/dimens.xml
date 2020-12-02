@@ -10,4 +10,5 @@
     <dimen name="dim36dp">36dp</dimen>
     <dimen name="dim40dp">40dp</dimen>
     <dimen name="dom60dp">60dp</dimen>
+    <dimen name="dim130dp">130dp</dimen>
 </resources>

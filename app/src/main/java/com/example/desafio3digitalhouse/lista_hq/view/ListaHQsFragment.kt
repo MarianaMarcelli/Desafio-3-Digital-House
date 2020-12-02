@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.os.bundleOf
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.desafio3digitalhouse.R
@@ -50,8 +51,12 @@ class ListaHQsFragment : Fragment() {
                 "PRECO" to it.prices[0].price,
                 "PAGINAS" to it.pageCount,
                 "TITULO" to it.title,
-                "IMAGEM" to it.images
+                "IMAGEM" to it.images,
+                "CAPA" to it.thumbnail.converterImagem()
             )
+
+            val navController = findNavController()
+            navController.navigate(R.id.action_listaHQsFragment_to_infoHqFragment, bundle)
         }
 
         _recyclerView.apply {

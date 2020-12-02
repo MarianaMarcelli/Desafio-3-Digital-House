@@ -10,7 +10,7 @@ import com.squareup.picasso.Picasso
 
 class ComicsViewHolder (private val _itemView: View): RecyclerView.ViewHolder(_itemView) {
 
-    private var numero= _itemView.findViewById<TextView>(R.id.txtComicNumber)
+    private var numero = _itemView.findViewById<TextView>(R.id.txtComicNumber)
     private var imagemCapa = _itemView.findViewById<ImageView>(R.id.imageComic)
 
     fun bind(comic : ComicsModel) {
