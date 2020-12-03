@@ -51,8 +51,8 @@ class ListaHQsFragment : Fragment() {
                 "PRECO" to it.prices[0].price.toString(),
                 "PAGINAS" to it.pageCount.toString(),
                 "TITULO" to it.title,
-                "IMAGEM" to it.thumbnail.converterImagem("landscape_large"),
-                "CAPA" to it.thumbnail.converterImagem("portrait_medium")
+                "IMAGEM" to it.thumbnail.converterImagem("landscape_medium"),
+                "CAPA" to it.thumbnail.converterImagem("portrait_uncanny")
             )
 
             val navController = findNavController()

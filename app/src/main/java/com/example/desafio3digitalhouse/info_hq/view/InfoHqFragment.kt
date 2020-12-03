@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
 import com.example.desafio3digitalhouse.R
 import com.google.android.material.appbar.MaterialToolbar
@@ -79,17 +80,20 @@ class InfoHqFragment : Fragment() {
             .into(view.findViewById<ImageButton>(R.id.imagePromo))
 
 
+        val bundle = bundleOf(
+            "CAPA" to imagemCapa
+        )
         val navController = findNavController()
+
+        capa.setOnClickListener{
+            navController.navigate(R.id.action_infoHqFragment_to_coverDetailFragment, bundle)
+        }
 
         val toolbarInfo = view.findViewById<MaterialToolbar>(R.id.tollbarInfo)
         toolbarInfo.setNavigationOnClickListener {
             navController.navigate(R.id.action_infoHqFragment_to_listaHQsFragment)
         }
 
-//        val exibeCapa = view.findViewById<ImageView>(R.id.btnCover)
-//        exibeCapa.setOnClickListener{
-//            navController.navigate(R.id.action_infoHqFragment_to_coverDetailFragment)
-//        }
     }
 }
 

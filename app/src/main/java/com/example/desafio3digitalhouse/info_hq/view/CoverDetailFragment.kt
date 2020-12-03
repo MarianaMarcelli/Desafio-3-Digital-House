@@ -9,15 +9,13 @@ import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 import com.example.desafio3digitalhouse.R
 import com.google.android.material.appbar.MaterialToolbar
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.fragment_cover_detail.*
 
 
 class CoverDetailFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
+    private lateinit var _view: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +27,14 @@ class CoverDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        _view = view
+
+        val imagemCapa = requireArguments().getString("CAPA")
+
+        Picasso.get()
+            .load(imagemCapa)
+            .into(view.findViewById<ImageButton>(R.id.imageCoverDetail))
 
         val navController = findNavController()
 

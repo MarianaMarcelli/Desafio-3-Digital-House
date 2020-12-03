@@ -8,7 +8,7 @@
     tools:context=".info_hq.view.CoverDetailFragment">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageCoverDetail"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="@dimen/dim20dp"
