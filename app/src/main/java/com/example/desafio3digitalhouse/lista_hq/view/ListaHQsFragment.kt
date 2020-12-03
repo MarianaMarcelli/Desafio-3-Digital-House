@@ -45,14 +45,14 @@ class ListaHQsFragment : Fragment() {
 
         _listaAdapter = ComicsAdapter(_listaComics) {
             val bundle = bundleOf(
-                "ID" to it.id,
+
                 "DATAPUBLICACAO" to it.dates[0].date,
                 "DESCRICAO" to it.description,
                 "PRECO" to it.prices[0].price.toString(),
-                "PAGINAS" to it.pageCount,
+                "PAGINAS" to it.pageCount.toString(),
                 "TITULO" to it.title,
-                "IMAGEM" to it.images,
-                "CAPA" to it.thumbnail.path
+                "IMAGEM" to it.thumbnail.converterImagem("landscape_large"),
+                "CAPA" to it.thumbnail.converterImagem("portrait_medium")
             )
 
             val navController = findNavController()

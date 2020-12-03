@@ -17,12 +17,7 @@ class InfoHqFragment : Fragment() {
 
     private lateinit var _view: View
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
-    override fun onCreateView(
+       override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -41,10 +36,11 @@ class InfoHqFragment : Fragment() {
         val paginas = view.findViewById<TextView>(R.id.txtPaginas2)
         val data = view.findViewById<TextView>(R.id.txtData2)
         val imagemPromo = view.findViewById<ImageView>(R.id.imagePromo)
-    //    val capa = view.findViewById<ImageButton>(R.id.btnCover)
-//        val capa = arguments?.getString("CAPA")
+        val capa = view.findViewById<ImageButton>(R.id.btnCover)
 
 
+        val imagemCapa = requireArguments().getString("CAPA")
+        val imagemFundo = requireArguments().getString("IMAGEM")
         titulo.text = arguments?.getString("TITULO")
         descricao.text = arguments?.getString("DESCRICAO")
         preco.text = arguments?.getString("PRECO")
@@ -52,14 +48,35 @@ class InfoHqFragment : Fragment() {
         data.text = arguments?.getString("DATAPUBLICACAO")
 
 
+//        if (imagemCapa != null) {
+//            Picasso.get()
+//                .load(
+//                    imagemCapa.replace(
+//                        "http://",
+//                        "https://"
+//                    ) + "/portrait_medium." + comicCoverExtension
+//                )
+//                .into(imgCover)
+//        }
+//
+//        if (comicImgBackPath != null) {
+//            Picasso.get()
+//                .load(
+//                    comicImgBackPath.replace(
+//                        "http://",
+//                        "https://"
+//                    ) + "/landscape_medium." + comicImgBackExtension
+//                )
+//                .into(imgBack)
+//        }
 
-//        Picasso.get()
-//            .load(capa)
-//            .into(view.findViewById<ImageButton>(R.id.btnCover))
+        Picasso.get()
+            .load(imagemCapa)
+            .into(view.findViewById<ImageButton>(R.id.btnCover))
 
-//        Picasso.get()
-//            .load(capa)
-//            .into(view.findViewById<ImageView>(R.id.imagePromo))
+        Picasso.get()
+            .load(imagemFundo)
+            .into(view.findViewById<ImageButton>(R.id.imagePromo))
 
 
         val navController = findNavController()
@@ -69,10 +86,10 @@ class InfoHqFragment : Fragment() {
             navController.navigate(R.id.action_infoHqFragment_to_listaHQsFragment)
         }
 
-        val exibeCapa = view.findViewById<ImageView>(R.id.btnCover)
-        exibeCapa.setOnClickListener{
-            navController.navigate(R.id.action_infoHqFragment_to_coverDetailFragment)
-        }
+//        val exibeCapa = view.findViewById<ImageView>(R.id.btnCover)
+//        exibeCapa.setOnClickListener{
+//            navController.navigate(R.id.action_infoHqFragment_to_coverDetailFragment)
+//        }
     }
 }
 

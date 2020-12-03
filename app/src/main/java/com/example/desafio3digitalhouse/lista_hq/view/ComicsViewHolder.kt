@@ -14,11 +14,10 @@ class ComicsViewHolder (private val _itemView: View): RecyclerView.ViewHolder(_i
     private var imagemCapa = _itemView.findViewById<ImageView>(R.id.imageComic)
 
     fun bind(comic : ComicsModel) {
-        numero.text = comic.issueNumber.toString()
+        numero.text = comic.issueNumber.toInt().toString()
 
         Picasso.get()
-            .load(comic.thumbnail.converterImagem())
+            .load(comic.thumbnail.converterImagem("portrait_medium"))
             .into(imagemCapa)
     }
-
 }

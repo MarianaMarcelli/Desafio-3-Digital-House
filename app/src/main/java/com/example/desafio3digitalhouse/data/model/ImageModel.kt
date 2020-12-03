@@ -4,7 +4,7 @@ data class ImageModel(
     val path: String,
     val extension: String
 ) {
-    fun converterImagem(size: String? = "detail"): String {
+    fun converterImagem(size: String?): String {
         return "$path/$size.$extension".replace("http://", "https://")
     }
 }
