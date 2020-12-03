@@ -53,9 +53,5 @@
         android:id="@+id/coverDetailFragment"
         android:name="com.example.desafio3digitalhouse.info_hq.view.CoverDetailFragment"
         android:label="fragment_cover_detail"
-        tools:layout="@layout/fragment_cover_detail" >
-        <action
-            android:id="@+id/action_coverDetailFragment_to_infoHqFragment"
-            app:destination="@id/infoHqFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_cover_detail" />
 </navigation>

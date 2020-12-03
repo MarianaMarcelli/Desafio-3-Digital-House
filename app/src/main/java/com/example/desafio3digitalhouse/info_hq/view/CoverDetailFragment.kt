@@ -15,8 +15,6 @@ import kotlinx.android.synthetic.main.fragment_cover_detail.*
 
 class CoverDetailFragment : Fragment() {
 
-    private lateinit var _view: View
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -28,19 +26,17 @@ class CoverDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        _view = view
 
+        val closeButton = view.findViewById<ImageButton>(R.id.btnCloseCoverDetail)
         val imagemCapa = requireArguments().getString("CAPA")
 
         Picasso.get()
             .load(imagemCapa)
             .into(view.findViewById<ImageButton>(R.id.imageCoverDetail))
 
-        val navController = findNavController()
-
-        val closeButton = view.findViewById<ImageButton>(R.id.btnCloseCoverDetail)
         closeButton.setOnClickListener {
-            navController.navigate(R.id.action_coverDetailFragment_to_infoHqFragment)
+            activity?.onBackPressed()
+
         }
     }
 }
