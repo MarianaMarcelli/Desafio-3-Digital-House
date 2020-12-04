@@ -48,29 +48,6 @@ class InfoHqFragment : Fragment() {
         paginas.text = arguments?.getString("PAGINAS")
         data.text = arguments?.getString("DATAPUBLICACAO")
 
-
-//        if (imagemCapa != null) {
-//            Picasso.get()
-//                .load(
-//                    imagemCapa.replace(
-//                        "http://",
-//                        "https://"
-//                    ) + "/portrait_medium." + comicCoverExtension
-//                )
-//                .into(imgCover)
-//        }
-//
-//        if (comicImgBackPath != null) {
-//            Picasso.get()
-//                .load(
-//                    comicImgBackPath.replace(
-//                        "http://",
-//                        "https://"
-//                    ) + "/landscape_medium." + comicImgBackExtension
-//                )
-//                .into(imgBack)
-//        }
-
         Picasso.get()
             .load(imagemCapa)
             .into(view.findViewById<ImageButton>(R.id.btnCover))
