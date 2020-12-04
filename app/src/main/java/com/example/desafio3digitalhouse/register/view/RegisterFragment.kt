@@ -1,5 +1,6 @@
 package com.example.desafio3digitalhouse.register.view
 
+import android.app.Activity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,6 +15,7 @@ import com.google.android.material.appbar.MaterialToolbar
 
 class RegisterFragment : Fragment() {
 
+    private lateinit var _view: View
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -53,6 +55,7 @@ class RegisterFragment : Fragment() {
             if (password.text.toString().isBlank()) {
                 password.error = "Campo vazio"
                 todosCamposValidos = false
+                closeKeyboard()
             }
             if (todosCamposValidos) {
                 name.text.clear()
@@ -62,5 +65,11 @@ class RegisterFragment : Fragment() {
                 navController.navigate(R.id.action_registerFragment_to_listaHQsFragment)
             }
         }
+    }
+
+    private fun closeKeyboard() {
+        val imm: InputMethodManager =
+            _view.context.getSystemService(Activity.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(_view.windowToken, 0)
     }
 }
